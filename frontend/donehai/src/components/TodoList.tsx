@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { TodoItem } from './TodoItem';
 import { Todo, TodoPeriod } from '../types/todo';
 import { Calendar, Clock, ListTodo } from 'lucide-react';

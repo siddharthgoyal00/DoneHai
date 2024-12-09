@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { format, startOfMonth, endOfMonth, eachDayOfInterval, isSameDay } from 'date-fns';
 import { Todo } from '../types/todo';
 
