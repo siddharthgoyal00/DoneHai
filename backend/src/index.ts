@@ -6,7 +6,7 @@ import { todoRouter } from './routes/todos'; // Adjust the path if needed
 
 const app = express();
 const PORT = 5000;
-const MONGO_URI = "mongodb+srv://admin:fvmQ1D2B6iDKmUM6@cluster0.ztkcnap.mongodb.net/";
+const MONGO_URI = "mongodb+srv://admin:fvmQ1D2B6iDKmUM6@cluster0.ztkcnap.mongodb.net/donehai";
 
 // Middleware
 app.use(cors());
