@@ -4,7 +4,7 @@ import { Button } from "../../components/Button";
 import { Heading } from "../../components/Heading";
 import { InputBox } from "../../components/InputBox";
 import { useNavigate } from "react-router-dom";
-import axios from "axios"
+
 export const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

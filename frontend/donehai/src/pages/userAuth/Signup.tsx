@@ -5,7 +5,7 @@ import { Button } from "../../components/Button";
 import { Heading } from "../../components/Heading";
 import { InputBox } from "../../components/InputBox";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+
 
 export const SignUp = () => {
   const [name, Setname] = useState("");
@@ -40,19 +40,19 @@ export const SignUp = () => {
               label={"Password"}
             />
             <div className="pt-4">
-              <Button
-                onClick={async () => {
-                  const response = await axios.post(
-                    "http://localhost:3000/user/signup",
-                    {
-                      email: email,
-                      name: name,
-                      password: password,
-                    }
-                  );
-                  localStorage.setItem("UserToken", response.data.token);
-                  navigate("/home");
-                }}
+              <Button onClick={async () => 
+                //{
+                //   const response = await axios.post(
+                //     "http://localhost:3000/user/signup",
+                //     {
+                //       email: email,
+                //       name: name,
+                //       password: password,
+                //     }
+                //   );
+                //   localStorage.setItem("UserToken", response.data.token);
+                   navigate("/home")}
+                // }}
                 label={"Sign up"}
               />
             </div>
