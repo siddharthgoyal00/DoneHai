@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import bodyParser from 'body-parser';
 import { todoRouter } from './routes/todos'; // Adjust the path if needed
+import { userRouter } from './routes/user';
 
 const app = express();
 const PORT = 5000;
@@ -12,7 +13,7 @@ const MONGO_URI = "mongodb+srv://admin:fvmQ1D2B6iDKmUM6@cluster0.ztkcnap.mongodb
 app.use(cors());
 app.use(bodyParser.json());
 app.use('/api/todos', todoRouter);
-
+app.use('/user' , userRouter)
 // Connect to MongoDB
 mongoose
   .connect(MONGO_URI)

@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
 
+//todo db schema 
 const todoSchema = new mongoose.Schema({
   title: {
     type: String,
@@ -22,6 +23,33 @@ const todoSchema = new mongoose.Schema({
     type: Date,
     required: true,
   },
+  userId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User', // Reference to the User model
+    required: true,
+  },
 });
 
-export const Todo = mongoose.model('Todo', todoSchema);
+// user authentication db schema 
+const userSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true,
+    trim: true,
+  },
+  email: {
+    type: String,
+    required: true,
+    trim: true,
+    unique: true,
+  }, 
+  password: {
+    type: String,
+    required: true,
+    trim: true
+  },
+})
+
+const Todo = mongoose.model('Todo', todoSchema);
+const User = mongoose.model("User", userSchema);
+export {Todo , User}
